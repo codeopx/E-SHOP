@@ -1,0 +1,390 @@
+.product-card {
+  width: 256px;
+  height: 300px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.product-card:hover {
+  cursor: pointer;
+}
+.product-card-image {
+  background-color: rgb(183, 183, 183);
+  width: 100%;
+  height: 68%;
+  border-radius: 5px;
+}
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.product-card-details {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+}
+.products-card-d-r1 {
+    display: flex;
+    justify-content: space-between;
+}
+.products-card-d-r1 h2{
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+.product-button-row{
+    display: flex;
+    margin-top: 5px;
+}
+.product-button{
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #fff;
+    color: black;
+    border-radius: 30px;
+    border: 1.5px solid #2f234f;
+    font-size: 10px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+}
+.product-button:hover{
+    cursor: pointer;
+    background-color: #2f234f;
+    border: none;
+    color: #fff;
+}
+@media (max-width: 1350px) {
+  .product-card {
+    width: 230px;
+    height: 290px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 1280px) {
+  .product-card {
+    width: 220px;
+    height: 290px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 1200px) {
+  .product-card {
+    width: 200px;
+    height: 280px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 1125px) {
+  .product-card {
+    width: 190px;
+    height: 270px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 1060px) {
+  .product-card {
+    width: 180px;
+    height: 265px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 1000px) {
+  .product-card {
+    width: 170px;
+    height: 255px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 950px) {
+  .product-card {
+    width: 256px;
+    height: 300px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 900px) {
+  .product-card {
+    width: 256px;
+    height: 300px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 900px) {
+  .product-card {
+    width: 256px;
+    height: 300px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+}
+@media (max-width: 850px) {
+  .product-card {
+    width: 240px;
+    height: 300px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+}
+@media (max-width: 810px) {
+  .product-card {
+    width: 230px;
+    height: 290px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+}
+@media (max-width: 770px) {
+  .product-card {
+    width: 220px;
+    height: 280px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+}
+@media (max-width: 740px) {
+  .product-card {
+    width: 200px;
+    height: 270px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+}
+@media (max-width: 700px) {
+  .product-card {
+    width: 190px;
+    height: 270px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+}
+@media (max-width: 650px) {
+  .product-card {
+    width: 180px;
+    height: 250px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .product-card {
+    width: 170px;
+    height: 270px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+}
+@media (max-width: 580px) {
+  .product-card {
+    width: 160px;
+    height: 265px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+}
+@media (max-width: 550px) {
+  .product-card {
+    width: 150px;
+    height: 260px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+}
+@media (max-width: 510px) {
+  .product-card {
+    width: 140px;
+    height: 220px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+.product-button{
+  display: none;
+}
+}
+@media (max-width: 500px) {
+  .product-card {
+    width: 140px;
+    height: 200px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+.product-button{
+  display: none;
+}
+}
+@media (max-width: 480px) {
+  .product-card {
+    width: 130px;
+    height: 195px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+.product-button{
+  display: none;
+}
+}
+@media (max-width: 480px) {
+  .product-card {
+    width: 125px;
+    height: 190px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .products-card-d-r1 h2{
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f
+}
+.product-button{
+  display: none;
+}
+}
+@media (max-width: 450px) {
+  .product-card {
+    width: 120px;
+    height: 190px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 420px) {
+  .product-card {
+    width: 115px;
+    height: 180px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 410px) {
+  .product-card {
+    width: 112px;
+    height: 170px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 400px) {
+  .product-card {
+    width: 105px;
+    height: 165px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 380px) {
+  .product-card {
+    width: 150px;
+    height: 200px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 350px) {
+  .product-card {
+    width: 140px;
+    height: 200px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 330px) {
+  .product-card {
+    width: 130px;
+    height: 180px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 310px) {
+  .product-card {
+    width: 120px;
+    height: 170px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}

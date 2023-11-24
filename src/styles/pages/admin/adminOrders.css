@@ -1,0 +1,111 @@
+.adminOrders-screen {
+  display: flex;
+  height: auto;
+  background-color: #f2f2ff;
+}
+.adminOrders-container {
+  width: 73%;
+  height: auto;
+  display: block;
+  padding-top: 50px;
+  padding-left: 23%;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  background-color: #f2f2ff;
+}
+.adminOrders-details {
+  margin-top: 30px;
+}
+.adminOrders-details h1 {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+.adminOrders-details h2 {
+  padding-top: 5px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+.adminOrders-table {
+  margin-top: 50px;
+  height: auto;
+  width: 95%;
+  background-color: #ffff;
+  border-radius: 5px;
+  padding: 30px;
+  display: block;
+  overflow: auto;
+}
+.edit-button {
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .adminOrders-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f2f2ff;
+  }
+}
+@media (max-width: 1000px) {
+  .adminOrders-container {
+    width: 90%;
+    height: auto;
+    display: block;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f2f2ff;
+  }
+}
+@media (max-width: 800px) {
+  .adminOrders-container {
+    width: 87%;
+    height: auto;
+    display: block;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f2f2ff;
+  }
+}
+@media (max-width: 700px) {
+  .adminOrders-container {
+    width: 83%;
+    height: auto;
+    display: block;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f2f2ff;
+  }
+}
+@media (max-width: 500px) {
+  .adminOrders-container {
+    width: 80%;
+    height: auto;
+    display: block;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f2f2ff;
+  }
+}
+@media (max-width: 350px) {
+  .adminOrders-container {
+    width: 75%;
+    height: auto;
+    display: block;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #f2f2ff;
+  }
+}

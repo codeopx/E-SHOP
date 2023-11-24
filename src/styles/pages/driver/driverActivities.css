@@ -1,0 +1,60 @@
+.driver-activities {
+    display: none;
+}
+
+@media (max-width: 500px) {
+  .driver-activities {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .driver-activities h2 {
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+  }
+  .delivery-component {
+    height: 120px;
+    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .dc-rw1 {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+  }
+  .dc-rw1 h1 {
+    margin: 0;
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+  }
+  .dc-rw2 {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dc-completed {
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: green;
+  }
+  .dc-Notcompleted {
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: red;
+  }
+}

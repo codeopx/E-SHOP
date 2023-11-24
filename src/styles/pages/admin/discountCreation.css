@@ -1,0 +1,51 @@
+.create-discount-screen {
+  display: flex;
+  height: auto;
+  padding-bottom: 50px;
+  background-color: #f2f2ff;
+}
+.create-discount-Container h2 {
+  font-family: Poppins;
+  text-align: center;
+}
+.create-discount-Container {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 80px;
+  padding-left: 23%;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  background-color: #f2f2ff;
+}
+.create-discount-details {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.create-discount-details h1{
+    font-family: "Raleway", sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+}
+.create-discount-details h2{
+    margin-top: 0px;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+@media (max-width: 1200px) {
+    .create-discount-Container {
+      width: 100%;
+      height: auto;
+      display: block;
+      padding-top: 100px;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-bottom: 50px;
+      background-color: #f2f2ff;
+    }
+  }

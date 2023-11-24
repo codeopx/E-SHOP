@@ -1,0 +1,143 @@
+.order-details-page {
+  width: 100%;
+  height: 100vh;
+  background-color: #f2f2ff;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-details-page h1 {
+  font-size: 25px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  margin: 0;
+  color: black;
+  margin-left: 30px;
+}
+.order-details-card {
+  margin-top: 15px;
+  height: auto;
+  padding-bottom: 50px;
+  background-color: white;
+  width: 95%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-details-info {
+  margin-top: 30px;
+  width: 80%;
+  height: auto;
+  background-color: rgb(244, 244, 244);
+}
+.odR1 {
+  background-color: rgb(226, 226, 226);
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.odR1 h2 {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  color: black;
+  margin-left: 15px;
+}
+.odR1 h3 {
+  margin-right: 10px;
+}
+.odR2,
+.odR3,
+.odR4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.odR2 h2,
+h3 {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+  margin-left: 5px;
+}
+.odR3 h2,
+h3 {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+  margin-left: 5px;
+}
+.odR4 h2,
+h3 {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+  margin-left: 5px;
+}
+
+@media (max-width: 500px) {
+  .order-details-info {
+    margin-top: 30px;
+    width: 95%;
+    height: auto;
+    background-color: rgb(244, 244, 244);
+  }
+}
+@media (max-width: 450px) {
+  .order-details-page h1 {
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    margin: 0;
+    color: black;
+    margin-left: 30px;
+  }
+  .odR1 h2 {
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    margin: 0;
+    color: black;
+    margin-left: 15px;
+  }
+
+  .odR2 h2,
+  h3 {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    color: black;
+    margin-left: 5px;
+  }
+  .odR3 h2,
+  h3 {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    color: black;
+    margin-left: 5px;
+  }
+  .odR4 h2,
+  h3 {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    color: black;
+    margin-left: 5px;
+  }
+}

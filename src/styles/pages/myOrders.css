@@ -1,0 +1,14 @@
+.order-page{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.order-page h2 {
+    font-size: 25px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+  }

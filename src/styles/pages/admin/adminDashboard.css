@@ -1,0 +1,903 @@
+.dashboard-screen {
+  display: flex;
+  height: auto;
+  padding-bottom: 10px;
+  background-color: #f2f2ff;
+}
+.dashboard-container {
+  width: 73%;
+  height: auto;
+  display: block;
+  padding-top: 50px;
+  padding-left: 23%;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  background-color: #f2f2ff;
+}
+.dashboard-details {
+  margin-top: 30px;
+}
+.dashboard-details h1 {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+.dashboard-details h2 {
+  padding-top: 5px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+.dashboard-details-row1 {
+  display: flex;
+  margin-top: 30px;
+}
+.d-d-card {
+  height: 60px;
+  width: 35%;
+  background-color: #ffff;
+  border-radius: 5px;
+  margin: 5px;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+.d-d-card-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.d-d-card-column h1 {
+  margin: 0;
+  padding-top: 5px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.d-d-card-column h2 {
+  margin: 0;
+  padding-top: 5px;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+.d-d-card-column h4 {
+  margin: 0;
+  padding-top: 5px;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: gray;
+}
+.d-d-card-icon1 {
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  color: #ffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-d-card-icon2 {
+  width: 40px;
+  height: 40px;
+  background-color: purple;
+  color: #ffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-d-card-icon3 {
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  color: #ffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-d-card-icon4 {
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  color: #ffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard-details-row2 {
+  display: flex;
+  margin-top: 20px;
+}
+.d-d2-card1 {
+  height: 350px;
+  width: 63%;
+  background-color: #ffff;
+  border-radius: 5px;
+  margin: 5px;
+}
+.d-d2-card1 h1 {
+  padding-top: 20px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+.barchart{
+  padding: 20px;
+}
+.d-d2-card2 {
+  height: 350px;
+  width: 38%;
+  background-color: #ffff;
+  border-radius: 5px;
+  margin: 5px;
+}
+.d-d2-card2 h1 {
+  padding-top: 20px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+.doughnut {
+  padding-bottom: 65px;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.dashboard-details-row3 {
+  display: flex;
+  margin-top: 20px;
+}
+.d-d3-card {
+  height: 300px;
+  width: 100%;
+  background-color: #ffff;
+  border-radius: 5px;
+  padding: 30px;
+}
+.d-d3-card .details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details-row h1 {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+.details-row h3 {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: blue;
+  text-align: center;
+  cursor: pointer;
+}
+.details-p-row {
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .dashboard-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-top: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 50px;
+    background-color: #f2f2ff;
+  }
+}
+@media (max-width: 800px) {
+  .d-d-card {
+    height: 60px;
+    width: 16%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .d-d-card-column h1 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .d-d-card-column h2 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .d-d-card-column h4 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: gray;
+  }
+  .d-d-card-icon1 {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon2 {
+    width: 30px;
+    height: 30px;
+    background-color: purple;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon3 {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon4 {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .barchart{
+    padding: 10px;
+  }
+  .d-d2-card1 {
+    height: 350px;
+    width: 43.5%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .d-d2-card2 {
+    height: 350px;
+    width: 43.5%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .d-d3-card {
+    width: 85%;
+    height: auto;
+    display: block;
+    overflow: auto;
+  }
+}
+@media (max-width: 700px) {
+  .dashboard-container {
+    width: 90%;
+    height: auto;
+    display: block;
+    padding-top: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 50px;
+    background-color: #f2f2ff;
+  }
+  .dashboard-details-row1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .d-d-card {
+    height: 80px;
+    width: 38%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .d-d-card-column h1 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .d-d-card-column h2 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .d-d-card-column h4 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+  }
+  .d-d-card-icon1 {
+    width: 45px;
+    height: 45px;
+    background-color: green;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon2 {
+    width: 45px;
+    height: 45px;
+    background-color: purple;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon3 {
+    width: 45px;
+    height: 45px;
+    background-color: blue;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon4 {
+    width: 45px;
+    height: 45px;
+    background-color: orange;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .dashboard-details-row1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .d-d-card {
+    height: 80px;
+    width: 40%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .d-d-card-column h1 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .d-d-card-column h2 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .d-d-card-column h4 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+  }
+  .d-d-card-icon1 {
+    width: 45px;
+    height: 45px;
+    background-color: green;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon2 {
+    width: 45px;
+    height: 45px;
+    background-color: purple;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon3 {
+    width: 45px;
+    height: 45px;
+    background-color: blue;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon4 {
+    width: 45px;
+    height: 45px;
+    background-color: orange;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d2-card1 {
+    height: 320px;
+    width: 50%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .d-d2-card2 {
+    height: 320px;
+    width: 50%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .doughnut {
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .d-d3-card {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard-details-row1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .d-d-card {
+    height: 80px;
+    width: 37%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .d-d-card-column h1 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .d-d-card-column h2 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .d-d-card-column h4 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: gray;
+  }
+  .d-d-card-icon1 {
+    width: 35px;
+    height: 35px;
+    background-color: green;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon2 {
+    width: 35px;
+    height: 35px;
+    background-color: purple;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon3 {
+    width: 35px;
+    height: 35px;
+    background-color: blue;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon4 {
+    width: 35px;
+    height: 35px;
+    background-color: orange;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dashboard-details-row2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d2-card1 {
+    height: 320px;
+    width: 94%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .d-d2-card2 {
+    height: 400px;
+    width: 94%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .doughnut {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+  .d-d3-card {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 440px) {
+  .dashboard-details-row1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .d-d-card {
+    height: 80px;
+    width: 35%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .d-d-card-column h1 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .d-d-card-column h2 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .d-d-card-column h4 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: gray;
+  }
+  .d-d-card-icon1 {
+    width: 35px;
+    height: 35px;
+    background-color: green;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon2 {
+    width: 35px;
+    height: 35px;
+    background-color: purple;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon3 {
+    width: 35px;
+    height: 35px;
+    background-color: blue;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon4 {
+    width: 35px;
+    height: 35px;
+    background-color: orange;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dashboard-details-row2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d2-card1 {
+    height: 320px;
+    width: 94%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .d-d2-card2 {
+    height: 400px;
+    width: 94%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .doughnut {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .d-d3-card {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: auto;
+  }
+}
+@media (max-width: 420px) {
+  .dashboard-container {
+    padding-top: 40px;
+  }
+  .dashboard-details-row1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .d-d-card {
+    height: 70px;
+    width: 90%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .d-d-card-column h1 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .d-d-card-column h2 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .d-d-card-column h4 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: gray;
+  }
+  .d-d-card-icon1 {
+    width: 45px;
+    height: 45px;
+    background-color: green;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon2 {
+    width: 45px;
+    height: 45px;
+    background-color: purple;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon3 {
+    width: 45px;
+    height: 45px;
+    background-color: blue;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon4 {
+    width: 45px;
+    height: 45px;
+    background-color: orange;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dashboard-details-row2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d2-card1 {
+    height: 320px;
+    width: 94%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .d-d2-card2 {
+    height: 400px;
+    width: 94%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .doughnut {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .d-d3-card {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: auto;
+  }
+}
+@media (max-width: 380px) {
+  .d-d-card {
+    height: 70px;
+    width: 90%;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .d-d-card-column h1 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .d-d-card-column h2 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .d-d-card-column h4 {
+    margin: 0;
+    padding-top: 5px;
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: gray;
+  }
+  .d-d-card-icon1 {
+    width: 45px;
+    height: 45px;
+    background-color: green;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon2 {
+    width: 45px;
+    height: 45px;
+    background-color: purple;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon3 {
+    width: 45px;
+    height: 45px;
+    background-color: blue;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .d-d-card-icon4 {
+    width: 45px;
+    height: 45px;
+    background-color: orange;
+    color: #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

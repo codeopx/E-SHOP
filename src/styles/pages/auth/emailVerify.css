@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.verify-screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+}
+.verify-container {
+  max-width: 450px;
+  width: 100%;
+  padding: 30px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.verify-container h1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.verify-container p {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.verify-container-details {
+  height: 100px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.verify-container-details img {
+  height: 70px;
+  width: 70px;
+}
+.verify-container-details p {
+  margin-top: 10px;
+}
+.verify-container-details p span {
+  cursor: pointer;
+  color: #2f234f;
+  font-weight: 700;
+}
+.verify-container-details .spacer{
+    height: 200px;
+    width: 100%;
+}
+.verify-container-details button {
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-radius: 10px;
+  background-color: #2f234f;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}

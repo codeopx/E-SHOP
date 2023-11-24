@@ -1,0 +1,24 @@
+.driver-account-screen {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .driver-account-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding-top: 20px;
+  }
+  .driver-account-screen h1 {
+    margin: 0;
+    margin-left: 30px;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #2f234f;
+  }
+  .driver-form {
+    padding: 30px;
+  }
+}

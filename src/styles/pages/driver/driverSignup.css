@@ -1,0 +1,154 @@
+.driver-signupScreen {
+  display: flex;
+}
+.driver-signupScreen1 {
+  height: 100vh;
+  width: 60%;
+}
+.driver-signupScreen1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.driver-signupScreen2 {
+  max-width: 550px;
+  height: 100vh;
+  width: 40%;
+  background-color: #fff;
+}
+.driver-signupScreen2 h2 {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  text-align: center;
+}
+.driver-signupScreen2 h3 {
+  margin-top: 1px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  text-align: center;
+}
+input[type=file] {
+  width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+  font-family: "Poppins", sans-serif;
+}
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #2f234f;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+.progress{
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+@media (max-width: 1200px) {
+  .driver-signupScreen1 {
+    height: 70vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .driver-signupScreen1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .driver-signupScreen2 {
+    max-width: 550px;
+    height: 100vh;
+    width: 40%;
+    background-color: #fff;
+  }
+}
+@media (max-width: 1000px) {
+  .driver-signupScreen1 {
+    margin-top: 5%;
+    height: 60vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  .driver-signupScreen1 {
+    margin-top: 5%;
+    height: 45vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .driver-signupScreen2 {
+    max-width: 550px;
+    height: 100vh;
+    width: 50%;
+    background-color: #fff;
+  }
+}
+@media (max-width: 700px) {
+  .driver-signupScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .driver-signupScreen1 {
+    margin-top: 5%;
+    height: 300px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .driver-signupScreen2 {
+    max-width: 550px;
+    height: auto;
+    width: 90%;
+    background-color: #fff;
+  }
+}
+@media (max-width: 500px) {
+  .driver-signupScreen1 {
+    margin-top: 5%;
+    height: 300px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .driver-signupScreen2 {
+    max-width: 550px;
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+  }
+}
+@media (max-width: 400px) {
+  .driver-signupScreen1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

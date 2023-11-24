@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.login-intro {
+  padding-top: 60px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+.login-container {
+  max-width: 550px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
+}
+.n{
+  display: none;
+}
+.form-content header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 10px;
+}
+.form-content .sp1,
+.sp2,
+.sp3,
+.sp4,
+.sp5 {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+.terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.terms span{
+  align-self: flex-start;
+  margin-top: 5px;
+}
+.terms p {
+  margin-left: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+}
+.login-account {
+  margin-top: 20px;
+}
+.login-account p {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+}
+.login-account p span {
+  color: #2f234f;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+  margin-left: 2px;
+}
+.forgot-password h3 {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 5px;
+}
+@media (max-width: 500px) {
+  .login-container {
+    max-width: 450px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+  }
+  .terms span{
+    align-self: flex-start;
+    margin-top: 6px;
+  }
+  .terms p {
+    font-size: 14px;
+  }
+  .login-account p {
+    font-size: 14px;
+  }
+  .login-account p span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .login-container {
+    max-width: 350px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+  }
+  .terms p {
+    font-size: 14px;
+  }
+  .login-account p {
+    font-size: 14px;
+  }
+  .login-account p span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .login-container {
+    max-width: 320px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+  }
+  .terms p {
+    font-size: 14px;
+  }
+  .login-account p {
+    font-size: 14px;
+  }
+  .login-account p span {
+    font-size: 14px;
+  }
+}

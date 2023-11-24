@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.main-sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 999;
+}
+.main-sidebar .navbar {
+  height: 60px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 20px;
+  position: fixed;
+}
+.sidebar {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ffffff;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.menu1 {
+  height: 80px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.menu1 h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+  color: #ffffff;
+}
+.navbar-elements1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-row {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.email-row h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin-right: 10px;
+}
+.avatar h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+.m-icon{
+  margin-right: 15px;
+}
+@media(max-width: 600px){
+    .email-row{
+        display: none;
+    }
+}
