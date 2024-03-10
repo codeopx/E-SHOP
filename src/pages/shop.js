@@ -54,7 +54,7 @@ const Shop = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setFilter(value);
@@ -116,7 +116,7 @@ const Shop = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setFilter(value);
@@ -180,7 +180,7 @@ const Shop = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setFilter(value);
@@ -244,7 +244,7 @@ const Shop = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setFilter(value);
@@ -308,7 +308,7 @@ const Shop = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setFilter(value);
@@ -372,7 +372,7 @@ const Shop = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setFilter(value);
@@ -436,7 +436,7 @@ const Shop = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setFilter(value);
@@ -473,7 +473,7 @@ const Shop = () => {
               </button>
             </div>
             <div className="p-s-i-row2">
-              <button>
+              <button className="button2">
                 <Input
                   value={searchTerm}
                   className="i"
@@ -500,7 +500,7 @@ const Shop = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setFilter(value);
@@ -534,7 +534,7 @@ const Shop = () => {
               </button>
             </div>
             <div className="p-s-i-row2">
-              <button>
+              <button className="button2">
                 <Input
                   value={searchTerm}
                   className="i"

@@ -52,9 +52,18 @@
   justify-content: center;
   align-items: center;
 }
-.p-s-i-row1 button {
+.p-s-i-row1 .button {
   width: 40%;
   font-weight: 700;
+  background-color: gainsboro;
+  padding: 5px;
+  border-radius: 0px;
+}
+.p-s-i-row2 .button2 {
+  width: 100%;
+  background-color: gainsboro;
+  padding: 5px;
+  border-radius: 0px;
 }
 .p-s-i-row1 button .s {
   width: 100%;
@@ -63,9 +72,7 @@
 .s span {
   font-size: 14px;
 }
-.p-s-i-row2 button {
-  width: 100%;
-}
+
 .p-s-i-row1 button .i {
   width: 100%;
   font-family: "Raleway", sans-serif;

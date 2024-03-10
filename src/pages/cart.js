@@ -33,28 +33,25 @@ const Cart = () => {
       });
     });
   };
+  const getSum = async () => {
+    const coll = collection(db, "cart");
+    const q = query(coll, where("id", "==", user?.uid));
+    const snapshot = await getAggregateFromServer(q, {
+      total: sum("price"),
+    });
+    setTotal(snapshot.data().total);
+    console.log(snapshot.data().total)
+  };
 
   useEffect(() => {
     checkCart();
+    getSum();
     return () => {
       checkCart();
+      getSum();
     };
   }, [cart]);
 
-  useEffect(() => {
-    const getSum = async () => {
-      const coll = collection(db, "cart");
-      const q = query(coll, where("id", "==", user?.uid));
-      const snapshot = await getAggregateFromServer(q, {
-        total: sum("price"),
-      });
-      setTotal(snapshot.data().total);
-      // console.log(total)
-    };
-    return () => {
-      getSum();
-    };
-  }, [total]);
 
   return (
     <div className="cart-details">

@@ -91,7 +91,7 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Form.Item>
-              <div className="forgot-password">
+              <div className="forgot-password" onClick={()=>Navigate('/forgot')}>
                 <h3>Forgot password?</h3>
               </div>
               {loading ? (

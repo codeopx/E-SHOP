@@ -79,24 +79,6 @@ const AdminOrders = () => {
                     align="left"
                     style={{ minWidth: "100px", fontFamily: "Raleway" }}
                   >
-                    Rider Name
-                  </TableCell>
-                  <TableCell
-                    align="left"
-                    style={{ minWidth: "100px", fontFamily: "Raleway" }}
-                  >
-                    Rider Phone
-                  </TableCell>
-                  <TableCell
-                    align="left"
-                    style={{ minWidth: "100px", fontFamily: "Raleway" }}
-                  >
-                    Rider Number
-                  </TableCell>
-                  <TableCell
-                    align="left"
-                    style={{ minWidth: "100px", fontFamily: "Raleway" }}
-                  >
                     Status
                   </TableCell>
                   <TableCell
@@ -131,9 +113,7 @@ const AdminOrders = () => {
                         <TableCell align="left">
                           {"₦" + row.amount.toLocaleString()}
                         </TableCell>
-                        <TableCell align="left">{row.rider_name}</TableCell>
-                        <TableCell align="left">{row.rider_number}</TableCell>
-                        <TableCell align="left">{row.rider_phone}</TableCell>
+    
                         <TableCell align="left">{row.status}</TableCell>
                         <TableCell align="left">
                           {row.orderDate.toDate().toDateString()}

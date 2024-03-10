@@ -54,7 +54,7 @@ const NewProducts = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setSort(value);
@@ -135,7 +135,7 @@ const NewProducts = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setSort(value);
@@ -216,7 +216,7 @@ const NewProducts = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setSort(value);
@@ -297,7 +297,7 @@ const NewProducts = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setSort(value);
@@ -378,7 +378,7 @@ const NewProducts = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setSort(value);
@@ -431,7 +431,7 @@ const NewProducts = () => {
               </button>
             </div>
             <div className="p-s-i-row2">
-              <button>
+              <button className="button2">
                 <Input
                   value={searchTerm}
                   className="i"
@@ -458,7 +458,7 @@ const NewProducts = () => {
         <section className="products-section">
           <div className="products-section-inputs">
             <div className="p-s-i-row1">
-              <button>
+              <button className="button">
                 <Select
                   onChange={(value) => {
                     setSort(value);
@@ -511,7 +511,7 @@ const NewProducts = () => {
               </button>
             </div>
             <div className="p-s-i-row2">
-              <button>
+              <button className="button2">
                 <Input
                   value={searchTerm}
                   className="i"

@@ -36,7 +36,7 @@ import {
   BarElement,
 } from "chart.js";
 import { Doughnut, Bar } from "react-chartjs-2";
-import { Button } from "antd";
+import { Button, ConfigProvider, Modal } from "antd";
 
 ChartJS.register(
   ArcElement,
@@ -65,12 +65,19 @@ const AdminDashboard = () => {
   const [AudioE, setAudioE] = useState(0);
   const [power, setPower] = useState(0);
   const [order, setOrder] = useState([]);
-  const [items, setItems] = useState([]);
+  const [stock, setStock] = useState([]);
   const [pending, setPending] = useState(0);
   const [processing, setProcessing] = useState(0);
   const [transist, setTransist] = useState(0);
   const [delivered, setDelivered] = useState(0);
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   const options = {
     responsive: true,
     plugins: {
@@ -126,6 +133,28 @@ const AdminDashboard = () => {
         borderWidth: 1,
       },
     ],
+  };
+  const checkStock = async () => {
+    var count;
+    const productRef = collection(db, "products");
+    const featuredQuery = query(productRef, where("quantity", "<=", 25));
+    const querySnapshots = await getCountFromServer(featuredQuery);
+    count = querySnapshots.data().count;
+    console.log(count);
+    if (count >= 1) {
+      showStock();
+    }
+  };
+  const showStock = async () => {
+    const productRef = collection(db, "products");
+    const featuredQuery = query(productRef, where("quantity", "<=", 25));
+    const querySnapshots = await getDocs(featuredQuery);
+    let products = [];
+    querySnapshots.forEach((doc) => {
+      products.push({ id: doc.id, ...doc.data() });
+    });
+    setStock(products);
+    setIsModalOpen(true);
   };
   const showItems = async (id) => {
     var products;
@@ -262,6 +291,7 @@ const AdminDashboard = () => {
     getPending();
     getProcessing();
     getTransit();
+    checkStock();
     return () => {
       getSales();
       getOrders();
@@ -278,11 +308,29 @@ const AdminDashboard = () => {
       getPending();
       getProcessing();
       getTransit();
+      checkStock();
     };
   }, []);
   return (
     <div className="dashboard-screen">
       <SideBar />
+      <ConfigProvider
+        theme={{
+          token: {
+            fontFamily: "Raleway",
+            colorPrimary: "#2f234f",
+          },
+        }}
+      >
+        <Modal
+          title="Restocking Reminder...!"
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          <StockProducts products={stock}/>
+        </Modal>
+      </ConfigProvider>
       <div className="dashboard-container">
         <div className="dashboard-details">
           <h1>Dashboard</h1>
@@ -333,7 +381,7 @@ const AdminDashboard = () => {
         <div className="dashboard-details-row2">
           <div className="d-d2-card1">
             <h1>Order Status chart</h1>
-          <Bar options={options} data={data2} className="barchart"/>
+            <Bar options={options} data={data2} className="barchart" />
           </div>
           <div className="d-d2-card2">
             <h1>Products by category</h1>
@@ -429,3 +477,18 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+
+const StockProducts = ({products}) => {
+  return (
+    <div className="modal">
+      <h1>The following products need to be restocked</h1>
+    {products.map((item)=>(
+      <div>
+        <h2>
+          {`${item.name}(${item.quantity})`}
+        </h2>
+      </div>
+    ))}
+    </div>
+  );
+};

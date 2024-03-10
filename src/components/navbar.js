@@ -5,8 +5,8 @@ import { GoPerson } from "react-icons/go";
 import { PiShoppingBagOpenDuotone } from "react-icons/pi";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
-import { useState, useEffect } from "react";
-import { collection, where, onSnapshot,query } from "firebase/firestore";
+import { useState, useEffect, useRef } from "react";
+import { collection, where, onSnapshot, query } from "firebase/firestore";
 import { db } from "../firebase";
 import { Badge } from "antd";
 import { UserAuth } from "../context/authContext";
@@ -15,6 +15,24 @@ import { auth } from "../firebase";
 import { excerpt } from "../utility";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setOpen(false);
+        console.log(menuRef.current);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
   const [clicked, setClicked] = useState(false);
   const [cart, setCart] = useState([]);
   const { user } = UserAuth();
@@ -24,6 +42,14 @@ const Navbar = () => {
 
   const handleClick = () => {
     setClicked(!clicked);
+  };
+  const savedItems = () => {
+    setOpen(!open);
+    navigate("/saved-items")
+  };
+  const orders = () => {
+    setOpen(!open);
+    navigate("/orders");
   };
   const handleLogout = () => {
     signOut(auth)
@@ -36,7 +62,10 @@ const Navbar = () => {
       });
   };
   const checkCart = async () => {
-    const q = query(collection(db, "cart"), where("id", "==", user?.uid || "1234"));
+    const q = query(
+      collection(db, "cart"),
+      where("id", "==", user?.uid || "1234")
+    );
     let featured = [];
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -74,27 +103,29 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="nav-icons">
-            <div className="nav-icons-person">
-              <div className="nav-icon-person-child">
-                <span>
-                  <GoPerson />
-                </span>
+            <div className="menu-container" ref={menuRef}>
+              <div
+                className="menu-trigger"
+                onClick={() => {
+                  setOpen(!open);
+                }}
+              >
+                <GoPerson className="dp-icon" />
                 <h1>Account</h1>
               </div>
-              <div class="dropdown-content">
-                <button onClick={() => navigate("/login")}>Sign In</button>
-                <div className="dp-account">
-                  <span>
-                    <MdOutlineFavoriteBorder />
-                  </span>
-                  <h1>Saved Items</h1>
-                </div>
-                <div className="dp-account">
-                  <span>
-                    <PiShoppingBagOpenDuotone />
-                  </span>
-                  <h1>Orders</h1>
-                </div>
+
+              <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
+                <ul>
+                  <button onClick={() => navigate("/login")}>Sign In</button>
+                  <DropdownItem
+                    img={<MdOutlineFavoriteBorder />}
+                    text={"Saved Items"}
+                  />
+                  <DropdownItem
+                    img={<PiShoppingBagOpenDuotone />}
+                    text={"Orders"}
+                  />
+                </ul>
               </div>
             </div>
             <div onClick={() => navigate("/cart")} className="nav-icons-cart">
@@ -108,32 +139,36 @@ const Navbar = () => {
           </div>
         </div>
         <div className="nav-icons2">
-          <div className="nav-icons-person">
-            <div className="nav-icon-person-child">
-              <span>
-                <GoPerson />
-              </span>
+          <div className="menu-container" ref={menuRef}>
+            <div
+              className="menu-trigger"
+              onClick={() => {
+                setOpen(!open);
+              }}
+            >
+              <GoPerson className="dp-icon" />
               <h1>Account</h1>
             </div>
-            <div class="dropdown-content">
-              <button>Sign In</button>
-              <div className="dp-account">
-                <span>
-                  <MdOutlineFavoriteBorder />
-                </span>
-                <h1>Saved Items</h1>
-              </div>
-              <div className="dp-account">
-                <span>
-                  <PiShoppingBagOpenDuotone />
-                </span>
-                <h1>Orders</h1>
-              </div>
+
+            <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
+              <ul>
+                <button onClick={() => navigate("/login")}>Sign In</button>
+                <DropdownItem
+                  img={<MdOutlineFavoriteBorder />}
+                  text={"Saved Items"}
+                />
+                <DropdownItem
+                  img={<PiShoppingBagOpenDuotone />}
+                  text={"Orders"}
+                />
+              </ul>
             </div>
           </div>
           <div onClick={() => navigate("/cart")} className="nav-icons-cart">
             <span>
-              <BsBag />
+              <Badge size="small">
+                <BsBag />
+              </Badge>
             </span>
             <h1>Cart</h1>
           </div>
@@ -164,27 +199,33 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="nav-icons">
-            <div className="nav-icons-person">
-              <div className="nav-icon-person-child">
-                <span>
-                  <GoPerson />
-                </span>
+            <div className="menu-container" ref={menuRef}>
+              <div
+                className="menu-trigger"
+                onClick={() => {
+                  setOpen(!open);
+                }}
+              >
+                <GoPerson className="dp-icon" />
                 <h1>{email}</h1>
               </div>
-              <div class="dropdown-content">
-                <button onClick={handleLogout}>LogOut</button>
-                <div className="dp-account">
-                  <span onClick={() => navigate("/saved-items")}>
-                    <MdOutlineFavoriteBorder />
-                  </span>
-                  <h1>Saved Items</h1>
-                </div>
-                <div className="dp-account">
-                  <span onClick={() => navigate("/orders")}>
-                    <PiShoppingBagOpenDuotone />
-                  </span>
-                  <h1>Orders</h1>
-                </div>
+
+              <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
+                <ul>
+                  <button onClick={handleLogout}>LogOut</button>
+                  <div onClick={() => savedItems()}>
+                    <DropdownItem
+                      img={<MdOutlineFavoriteBorder />}
+                      text={"Saved Items"}
+                    />
+                  </div>
+                  <div onClick={() => orders()}>
+                    <DropdownItem
+                      img={<PiShoppingBagOpenDuotone />}
+                      text={"Orders"}
+                    />
+                  </div>
+                </ul>
               </div>
             </div>
             <div onClick={() => navigate("/cart")} className="nav-icons-cart">
@@ -198,29 +239,35 @@ const Navbar = () => {
           </div>
         </div>
         <div className="nav-icons2">
-          <div className="nav-icons-person">
-            <div className="nav-icon-person-child">
-              <span>
-                <GoPerson />
-              </span>
-              <h1>{excerpt(email, 5)}</h1>
-            </div>
-            <div class="dropdown-content">
-              <button onClick={handleLogout}>LogOut</button>
-              <div className="dp-account">
-                <span onClick={() => navigate("/saved-items")}>
-                  <MdOutlineFavoriteBorder />
-                </span>
-                <h1>Saved Items</h1>
+        <div className="menu-container" ref={menuRef}>
+              <div
+                className="menu-trigger"
+                onClick={() => {
+                  setOpen(!open);
+                }}
+              >
+                <GoPerson className="dp-icon" />
+                <h1>{excerpt(email, 5)}</h1>
               </div>
-              <div className="dp-account">
-                <span onClick={() => navigate("/orders")}>
-                  <PiShoppingBagOpenDuotone />
-                </span>
-                <h1>Orders</h1>
+
+              <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
+                <ul>
+                  <button onClick={handleLogout}>LogOut</button>
+                  <div onClick={() => savedItems()}>
+                    <DropdownItem
+                      img={<MdOutlineFavoriteBorder />}
+                      text={"Saved Items"}
+                    />
+                  </div>
+                  <div onClick={() => orders()}>
+                    <DropdownItem
+                      img={<PiShoppingBagOpenDuotone />}
+                      text={"Orders"}
+                    />
+                  </div>
+                </ul>
               </div>
             </div>
-          </div>
           <div onClick={() => navigate("/cart")} className="nav-icons-cart">
             <span>
               <Badge count={cart || 0} size="small">
@@ -237,5 +284,15 @@ const Navbar = () => {
     );
   }
 };
+
+function DropdownItem(props) {
+  return (
+    <li className="dropdownItem">
+      <span>{props.img}</span>
+      {/* <img src={props.img}></img> */}
+      <a> {props.text} </a>
+    </li>
+  );
+}
 
 export default Navbar;

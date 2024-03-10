@@ -6,6 +6,7 @@ import {
   SubMenu,
 } from "react-pro-sidebar";
 import "../styles/components/sidebar.css";
+import { IoMdNotificationsOutline } from "react-icons/io";
 import { BiLogOut } from "react-icons/bi";
 import { FiShoppingBag } from "react-icons/fi";
 import {
@@ -13,14 +14,14 @@ import {
   AiOutlineHome,
   AiOutlineShopping,
 } from "react-icons/ai";
-import { NavLink,useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { TbPigMoney } from "react-icons/tb";
 import { RiMenu3Line } from "react-icons/ri";
 import {
   MdOutlineLibraryAdd,
   MdOutlineWorkHistory,
   MdOutlineDeliveryDining,
-  MdOutlineDiscount
+  MdOutlineDiscount,
 } from "react-icons/md";
 import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
@@ -29,7 +30,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 
 const SideBar = () => {
-  const navigate =  useNavigate()
+  const navigate = useNavigate();
   const { user } = UserAuth();
   const [broken, setBroken] = useState(false);
   const [toggled, setToggled] = useState(false);
@@ -52,6 +53,7 @@ const SideBar = () => {
     <div className="main-sidebar">
       <nav className="navbar">
         <div className="navbar-elements1">
+          
           <div className="avatar">
             <h1>{letter}</h1>
           </div>
@@ -134,36 +136,28 @@ const SideBar = () => {
             onClick={() => setToggled(false)}
             className="menuitem"
             icon={<AiOutlineSetting />}
-            component={<NavLink to="/dashboard" />}
+            
           >
             Settings
           </MenuItem>
-         <SubMenu label="Coupon & Discounts" icon={<TbPigMoney />}>
-         <MenuItem
-            onClick={() => setToggled(false)}
-            className="menuitem"
-            icon={<MdOutlineLibraryAdd/>}
-            component={<NavLink to="/discount-creation" />}
-          >
-            Create Coupon
-          </MenuItem>
-          <MenuItem
-            onClick={() => setToggled(false)}
-            className="menuitem"
-            icon={<MdOutlineDiscount />}
-            component={<NavLink to="/view-discounts"/>}
-          >
-            My Coupons
-          </MenuItem>
-         </SubMenu>
-          <MenuItem
-            onClick={() => setToggled(false)}
-            className="menuitem"
-            icon={<MdOutlineDeliveryDining />}
-            component={<NavLink to="/view-riders"/>}
-          >
-            Riders
-          </MenuItem>
+          <SubMenu label="Coupon & Discounts" icon={<TbPigMoney />}>
+            <MenuItem
+              onClick={() => setToggled(false)}
+              className="menuitem"
+              icon={<MdOutlineLibraryAdd />}
+              component={<NavLink to="/discount-creation" />}
+            >
+              Create Coupon
+            </MenuItem>
+            <MenuItem
+              onClick={() => setToggled(false)}
+              className="menuitem"
+              icon={<MdOutlineDiscount />}
+              component={<NavLink to="/view-discounts" />}
+            >
+              My Coupons
+            </MenuItem>
+          </SubMenu>
           <MenuItem
             onClick={() => handleLogout()}
             className="menuitem"

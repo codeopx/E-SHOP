@@ -8,6 +8,7 @@ import Power from "../styles/images/power.jpeg";
 import Television from "../styles/images/television.jpeg";
 import Accessories from "../styles/images/accessories.jpg";
 import { useState, useEffect } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import {
   collection,
   getDocs,
@@ -26,6 +27,7 @@ const Home = () => {
   const navigate = useNavigate();
   const [featured, setFeatured] = useState([]);
   const [newlyadded, setnewlyadded] = useState([]);
+  const [loading, setLoading] = useState(true);
   //// category count
   const [mobile, setMobile] = useState(0);
   const [accessories, setAccessories] = useState(0);
@@ -93,8 +95,8 @@ const Home = () => {
       featured.push({ id: doc.id, ...doc.data() });
     });
     setFeatured(featured);
+    setLoading(false);
   };
-
   const getNewlyAddedProducts = async () => {
     const productRef = collection(db, "products");
     const newQuery = query(productRef, orderBy("added", "desc"), limit(10));
@@ -108,6 +110,7 @@ const Home = () => {
 
   useEffect(() => {
     getFeaturedProducts();
+    getNewlyAddedProducts();
     getMobile();
     getAccessories();
     getLaptops();
@@ -115,7 +118,6 @@ const Home = () => {
     getAudio();
     getPower();
     return () => {
-      //unsub();
       getFeaturedProducts();
       getNewlyAddedProducts();
       getMobile();
@@ -137,14 +139,16 @@ const Home = () => {
           whileInView={{ scale: 1, opacity: 1 }}
         >
           <h1>Grab Upto 50% Off On Selected Headphones</h1>
-          <motion.button whileHover={{ scale: 1.2 }} className="button">
+          <motion.button 
+          onClick={()=>navigate("/shop")}
+          whileHover={{ scale: 1.2 }} className="button">
             Buy Now
           </motion.button>
         </motion.div>
         <div className="img-container">
           <motion.img
             initial={{ scale: 0.5, opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.1 }}
             whileInView={{ scale: 1, opacity: 1 }}
             src={Intro}
             alt=""
@@ -154,13 +158,17 @@ const Home = () => {
       <section className="featured-products">
         <motion.h1
           initial={{ scale: 0.5, opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           whileInView={{ scale: 1, opacity: 1 }}
         >
           Featured Products
         </motion.h1>
         <div className="featured-productsC">
-          <FeaturedProducts products={featured} />
+          {loading ? (
+            <ClipLoader color={"#2f234f"} loading={loading} size={25} />
+          ) : (
+            <FeaturedProducts products={featured} />
+          )}
         </div>
       </section>
       <section className="just-arrived">
@@ -220,7 +228,6 @@ const Home = () => {
             whileInView={{ scale: 1, opacity: 1 }}
             className="cat-3"
             onClick={() => navigate("/shop")}
-
           >
             <div className="cat-image-box">
               <img src={Audio} alt="" />
@@ -236,7 +243,6 @@ const Home = () => {
             whileInView={{ scale: 1, opacity: 1 }}
             className="cat-4"
             onClick={() => navigate("/shop")}
-
           >
             <div className="cat-image-box">
               <img src={Television} alt="" />
@@ -252,7 +258,6 @@ const Home = () => {
             whileInView={{ scale: 1, opacity: 1 }}
             className="cat-5"
             onClick={() => navigate("/shop")}
-
           >
             <div className="cat-image-box">
               <img src={Power} alt="" />

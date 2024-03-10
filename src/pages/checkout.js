@@ -192,8 +192,8 @@ const Checkout = () => {
       });
       await deleteDoc(doc(db, "cart", cartID)).then(() => {
         setLoading(true);
-        navigate(`/pick-driver/${docRef.id}`);
-        setLoading(false);
+        navigate("/");
+        window.location.reload(false);
       });
     });
   };

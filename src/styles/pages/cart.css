@@ -162,13 +162,13 @@
   .cart-detailsR-checkout {
     margin-left: 10px;
     width: 68%;
-    height: 170px;
+    height: 200px;
     border: 1px solid gray;
     border-radius: 10px;
     padding-left: 20px;
     padding-right: 20px;
   }
-  .cart-details-R2,.cart-details-R3 {
+  .cart-details-R2{
     display: none;
   }
   .cart-detailsR-checkout hr.solid2,hr.solid3{
@@ -179,7 +179,7 @@
   .cart-detailsR-checkout {
     margin-left: 10px;
     width: 68%;
-    height: 150px;
+    height: 200px;
     border: 1px solid gray;
     border-radius: 10px;
     padding-left: 20px;
